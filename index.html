@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>艾薇娜扎肚服務 | 溫柔產後腹部照護與體態管理</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#FAF6F0',
+                            100: '#F3ECE1',
+                            200: '#E6D7C3',
+                            300: '#D5C0A5',
+                            400: '#C2A787',
+                            500: '#A28171', // 品牌主色調 (粉棕)
+                            600: '#8A6859',
+                            700: '#6E4F42',
+                            800: '#543B31',
+                            900: '#3D2A23',
+                        },
+                        warmBg: '#FAF7F2'
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif TC"', 'serif'],
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #FAF7F2;
+            color: #4A3E3D;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Noto Serif TC', serif;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#E6D7C3 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="smooth-scroll antialiased selection:bg-brand-200 selection:text-brand-900">
+
+    <!-- 頂部導覽列 -->
+    <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-brand-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="https://i.ibb.co/Qq4M8n9/logo.png" alt="艾薇娜服務網頁logo" class="h-12 w-auto object-contain transition-transform group-hover:scale-105">
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-xl text-brand-800 tracking-wider">艾薇娜</span>
+                        <span class="text-xs text-brand-500 tracking-widest">扎肚服務工作室</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+                    <a href="#about" class="hover:text-brand-500 transition-colors">關於我們</a>
+                    <a href="#services" class="hover:text-brand-500 transition-colors">服務特色</a>
+                    <a href="#feedback" class="hover:text-brand-500 transition-colors">顧客回饋</a>
+                    <a href="#location" class="hover:text-brand-500 transition-colors">服務據點</a>
+                    <a href="#faq" class="hover:text-brand-500 transition-colors">常見問題</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://line.me/ti/p/~@fqt8440v" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 font-medium text-sm">
+                        <i class="fa-brands fa-line text-lg"></i>
+                        <span>預約諮詢</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-800 hover:text-brand-500 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brand-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-gray-700 hover:text-brand-500 font-medium">關於我們</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-brand-500 font-medium">服務特色</a>
+            <a href="#feedback" class="block py-2 text-gray-700 hover:text-brand-500 font-medium">顧客回饋</a>
+            <a href="#location" class="block py-2 text-gray-700 hover:text-brand-500 font-medium">服務據點</a>
+            <a href="#faq" class="block py-2 text-gray-700 hover:text-brand-500 font-medium">常見問題</a>
+            <a href="https://line.me/ti/p/~@fqt8440v" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-brand-500 text-white py-3 rounded-xl shadow-sm text-center font-medium mt-4">
+                <i class="fa-brands fa-line text-lg"></i>
+                <span>官方 LINE 立即預約</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero 主視覺區 -->
+    <section class="relative py-16 md:py-24 bg-gradient-to-b from-brand-50 via-warmBg to-warmBg overflow-hidden bg-pattern">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 bg-brand-100/80 border border-brand-200 text-brand-800 text-xs md:text-sm px-4 py-1.5 rounded-full font-medium">
+                        <i class="fa-solid fa-sparkles text-brand-500"></i>
+                        <span>採全預約制 ‧ 一對一專屬照顧</span>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-900 leading-tight">
+                        簡單、溫和的照護方式<br>
+                        <span class="text-brand-500">陪伴您重新找回溫柔體態</span>
+                    </h1>
+                    
+                    <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+                        依據個人狀況與需求，與您共同討論最適合的照護方式。透過專業腹部包扎、搭配按摩與熱敷，讓腰腹在日常活動中獲得穩固包覆與深層放鬆。
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="https://line.me/ti/p/~@fqt8440v" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-medium text-base">
+                            <i class="fa-brands fa-line text-xl"></i>
+                            <span>加入 LINE 預約諮詢</span>
+                        </a>
+                        <a href="#services" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-brand-50 text-brand-800 border border-brand-200 px-8 py-4 rounded-full transition-all duration-300 font-medium text-base">
+                            <span>了解服務內容</span>
+                            <i class="fa-solid fa-arrow-down text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Quick Info Badge -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-brand-200/60 max-w-md mx-auto md:mx-0">
+                        <div>
+                            <p class="text-xs text-gray-500">服務型態</p>
+                            <p class="text-sm font-semibold text-brand-800">全預約制</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">服務地區</p>
+                            <p class="text-sm font-semibold text-brand-800">台中市大里區</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">官方帳號</p>
+                            <p class="text-sm font-semibold text-brand-800">@fqt8440v</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logo Image Showcase Box -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Decorative Background Circles -->
+                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-brand-200/40 rounded-full filter blur-2xl"></div>
+                        <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-brand-300/30 rounded-full filter blur-2xl"></div>
+                        
+                        <div class="relative bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-brand-100 flex flex-col items-center text-center">
+                            <div class="w-48 h-48 rounded-2xl bg-brand-50/50 flex items-center justify-center p-4 border border-brand-100 mb-6 shadow-inner">
+                                <img src="https://i.ibb.co/Qq4M8n9/logo.png" alt="艾薇娜服務網頁logo" class="w-full h-full object-contain">
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-900 mb-2">艾薇娜 扎肚服務</h3>
+                            <p class="text-xs text-brand-600 tracking-wider mb-4">AVINA POSTNATAL CARE</p>
+                            <div class="w-12 h-0.5 bg-brand-300 mb-4"></div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                「以溫柔且穩定的力量，給予產後媽媽最細緻的日常腹部照顧。」
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我們 Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-brand-500 uppercase">About Us</span>
+                <h2 class="text-3xl font-serif font-bold text-brand-900 mt-2 mb-4">關於艾薇娜</h2>
+                <div class="w-16 h-1 bg-brand-400 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    我們深知產後體態調整是一個需要耐心與溫柔對待的過程。艾薇娜秉持日常照護的核心方向，陪伴每位產後媽媽慢慢調整、找回對身體的照顧與舒適感。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-warmBg p-8 rounded-2xl border border-brand-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-ribbon"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-brand-900 mb-3">1. 腹部包扎／束腹</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        透過布帶、彈力帶等專業且溫和的方式，協助固定腹部，給予腰腹適當支撐與安全感受。
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-warmBg p-8 rounded-2xl border border-brand-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-brand-900 mb-3">2. 腹部按摩與溫熱照護</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        依據個人服務內容與當日狀況，搭配適度的腹部按摩、溫熱熱敷或精油護理，釋放深層緊繃。
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-warmBg p-8 rounded-2xl border border-brand-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-brand-900 mb-3">3. 產後體態管理</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        以日常照護為主要方向，陪伴產後體態慢慢調整與修復，協助建立對身體的照顧與觀察習慣。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務特色 Section -->
+    <section id="services" class="py-20 bg-brand-50/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-brand-500 uppercase">Service Features</span>
+                <h2 class="text-3xl font-serif font-bold text-brand-900 mt-2 mb-4">服務特色</h2>
+                <div class="w-16 h-1 bg-brand-400 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-base">
+                    簡單、溫和的照護方式！依個人狀況與需求，與店家討論最適合您的個人化照護方案。
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-brand-100 shadow-sm flex flex-col md:flex-row items-center gap-6">
+                    <div class="w-20 h-20 bg-brand-100 shrink-0 rounded-2xl flex items-center justify-center text-brand-600 text-3xl">
+                        <i class="fa-solid fa-tape"></i>
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <div class="inline-block px-3 py-1 bg-brand-50 text-brand-700 text-xs rounded-md font-semibold mb-2">特色 01</div>
+                        <h3 class="text-2xl font-serif font-bold text-brand-900 mb-2">腹部包扎</h3>
+                        <p class="text-gray-600 text-base leading-relaxed">
+                            使用布帶或彈力帶進行腹部包扎與固定，讓腰腹在日常活動中有穩定、舒適且完整的包覆感受。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-brand-100 shadow-sm flex flex-col md:flex-row items-center gap-6">
+                    <div class="w-20 h-20 bg-brand-100 shrink-0 rounded-2xl flex items-center justify-center text-brand-600 text-3xl">
+                        <i class="fa-solid fa-hot-tub-person"></i>
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <div class="inline-block px-3 py-1 bg-brand-50 text-brand-700 text-xs rounded-md font-semibold mb-2">特色 02</div>
+                        <h3 class="text-2xl font-serif font-bold text-brand-900 mb-2">按摩 ‧ 熱敷</h3>
+                        <p class="text-gray-600 text-base leading-relaxed">
+                            可依服務安排搭配專屬腹部按摩、溫熱熱敷或精油護理，讓整個照護過程更放鬆、更具溫馨儀式感。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-brand-100 shadow-sm flex flex-col md:flex-row items-center gap-6">
+                    <div class="w-20 h-20 bg-brand-100 shrink-0 rounded-2xl flex items-center justify-center text-brand-600 text-3xl">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <div class="inline-block px-3 py-1 bg-brand-50 text-brand-700 text-xs rounded-md font-semibold mb-2">特色 03</div>
+                        <h3 class="text-2xl font-serif font-bold text-brand-900 mb-2">產後體態管理</h3>
+                        <p class="text-gray-600 text-base leading-relaxed">
+                            以產後日常體態照護為主軸，引導並協助您建立對身體的自我照顧與觀察習慣，循序漸進恢復自信狀態。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 顧客真實回饋 Section -->
+    <section id="feedback" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-brand-500 uppercase">Client Feedback</span>
+                <h2 class="text-3xl font-serif font-bold text-brand-900 mt-2 mb-4">顧客真實回饋</h2>
+                <div class="w-16 h-1 bg-brand-400 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-base">
+                    感謝媽媽們對艾薇娜的信任與支持！以下為顧客服務後的真實反饋紀錄（點擊圖片可放大觀看）：
+                </p>
+            </div>
+
+            <!-- Feedback Image Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-warmBg rounded-2xl p-6 border border-brand-100 shadow-sm flex flex-col items-center">
+                    <div class="w-full relative group overflow-hidden rounded-xl border border-gray-200 bg-white cursor-pointer" onclick="openLightbox('https://i.ibb.co/zVBcM8bK/image.png')">
+                        <img src="https://i.ibb.co/zVBcM8bK/image.png" alt="顧客回饋對話紀錄 1" class="w-full h-80 object-contain p-2 transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-brand-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium gap-2">
+                            <i class="fa-solid fa-magnifying-glass-plus text-xl"></i>
+                            <span>點擊放大檢視</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center w-full">
+                        <div class="flex items-center justify-center gap-1 text-amber-400 mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm font-semibold text-brand-900">顧客真實評價分享</p>
+                        <p class="text-xs text-gray-500 mt-1">「感覺包扎後腹部很有安全感，按摩過程也非常放鬆舒適！」</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-warmBg rounded-2xl p-6 border border-brand-100 shadow-sm flex flex-col items-center">
+                    <div class="w-full relative group overflow-hidden rounded-xl border border-gray-200 bg-white cursor-pointer" onclick="openLightbox('https://i.ibb.co/WpVwNf2b/image.png')">
+                        <img src="https://i.ibb.co/WpVwNf2b/image.png" alt="顧客回饋對話紀錄 2" class="w-full h-80 object-contain p-2 transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-brand-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium gap-2">
+                            <i class="fa-solid fa-magnifying-glass-plus text-xl"></i>
+                            <span>點擊放大檢視</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center w-full">
+                        <div class="flex items-center justify-center gap-1 text-amber-400 mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm font-semibold text-brand-900">產後媽媽好評推薦</p>
+                        <p class="text-xs text-gray-500 mt-1">「親切細心的討論與服務，讓產後照護變得更有儀式感。」</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 地點與服務方式 Section -->
+    <section id="location" class="py-20 bg-warmBg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Info Left Box -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-brand-500 uppercase">Information</span>
+                        <h2 class="text-3xl font-serif font-bold text-brand-900 mt-2">店家位置與預約方式</h2>
+                        <div class="w-16 h-1 bg-brand-400 rounded-full mt-3"></div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-brand-100 shadow-sm space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-500">店家地址</h4>
+                                <p class="text-base font-medium text-brand-900 mt-0.5">台中市大里區環中東路六段270號</p>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-100 pt-4 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0 mt-1">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-500">服務方式</h4>
+                                <p class="text-base font-medium text-brand-900 mt-0.5">【全預約制】一對一服務</p>
+                                <p class="text-xs text-gray-500 mt-1">為維護服務品質，請提前透過 LINE 預約時間。</p>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-100 pt-4 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0 mt-1">
+                                <i class="fa-brands fa-line text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-500">官方聯絡帳號</h4>
+                                <div class="flex items-center gap-2 mt-0.5">
+                                    <span class="text-lg font-bold text-brand-600">@fqt8440v</span>
+                                    <button onclick="copyLineID()" class="text-xs bg-brand-50 hover:bg-brand-100 text-brand-700 px-2.5 py-1 rounded border border-brand-200 transition-colors">
+                                        <i class="fa-regular fa-copy"></i> 複製 ID
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://line.me/ti/p/~@fqt8440v" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-500 hover:bg-brand-600 text-white py-4 rounded-xl shadow-md flex items-center justify-center gap-2 font-medium transition-colors">
+                        <i class="fa-brands fa-line text-xl"></i>
+                        <span>開啟 LINE 諮詢與預約</span>
+                    </a>
+                </div>
+
+                <!-- Google Map Right Box -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-3 rounded-3xl border border-brand-100 shadow-md">
+                        <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.815340156942!2d120.6975253!3d24.0903828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693db5fcd9ed9f%3A0xb36ed4be3c20db20!2zNDEyNzDlj7DkuK3luILlpKfniumAiumCreS4reWFsei3r-WFreautjI3MOmZnzE!5e0!3m2!1szh-TW!2stw!4v1700000000000!5m2!1szh-TW!2stw" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 常見問題 FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold tracking-widest text-brand-500 uppercase">FAQ</span>
+                <h2 class="text-3xl font-serif font-bold text-brand-900 mt-2 mb-4">常見問題 FAQ</h2>
+                <div class="w-16 h-1 bg-brand-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <div class="border border-brand-100 rounded-2xl overflow-hidden bg-warmBg">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center font-serif font-semibold text-brand-900 hover:bg-brand-50 transition-colors">
+                        <span>Q1. 產後多久可以開始預約扎肚照護？</span>
+                        <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-brand-100/50 pt-3">
+                        自然產一般建議產後約 2~3 週、剖腹產建議待傷口完全癒合（約 4~6 週後並諮詢醫師）即可開始。我們會根據您的恢復進度與身體狀況進行客製化評估與調整。
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="border border-brand-100 rounded-2xl overflow-hidden bg-warmBg">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center font-serif font-semibold text-brand-900 hover:bg-brand-50 transition-colors">
+                        <span>Q2. 腹部包扎過程中會不會感到過度緊繃或不適？</span>
+                        <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-brand-100/50 pt-3">
+                        不會的。艾薇娜訴求簡單、溫和的照護方式。包扎力度皆會以您的體感舒適為第一優先，讓腰腹維持適度且穩定的包覆感，不會有難以呼吸或強烈壓迫的情形。
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="border border-brand-100 rounded-2xl overflow-hidden bg-warmBg">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center font-serif font-semibold text-brand-900 hover:bg-brand-50 transition-colors">
+                        <span>Q3. 如何進行服務預約？可以直接現場造訪嗎？</span>
+                        <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-brand-100/50 pt-3">
+                        為保障每位媽媽的私人服務品質與完整體驗，工作室採【全預約制】。請事先透過官方 LINE（ID: @fqt8440v）預約時間，切勿直接前往現場以免空跑喔！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer 頁尾 -->
+    <footer class="bg-brand-900 text-white pt-16 pb-12 border-t border-brand-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex items-center gap-4 text-center md:text-left">
+                    <div class="w-16 h-16 bg-white rounded-full p-2 flex items-center justify-center shrink-0">
+                        <img src="https://i.ibb.co/Qq4M8n9/logo.png" alt="艾薇娜 Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-serif font-bold text-xl text-brand-100">艾薇娜扎肚服務工作室</h3>
+                        <p class="text-xs text-brand-300 mt-1">Avina Postnatal Body Care Service</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-brand-200">
+                    <a href="#about" class="hover:text-white transition-colors">關於我們</a>
+                    <a href="#services" class="hover:text-white transition-colors">服務特色</a>
+                    <a href="#feedback" class="hover:text-white transition-colors">顧客回饋</a>
+                    <a href="#location" class="hover:text-white transition-colors">服務據點</a>
+                    <a href="#faq" class="hover:text-white transition-colors">常見問題</a>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-brand-300 gap-4">
+                <p>📍 台中市大里區環中東路六段270號 ｜ 官方 LINE: @fqt8440v</p>
+                <p>&copy; 艾薇娜扎肚服務工作室 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal (對話圖片放大視窗) -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/80 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
+        <div class="relative max-w-4xl w-full max-h-[90vh] flex items-center justify-center">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white text-3xl hover:text-brand-300 focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightboxImage" src="" alt="放大檢視" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl">
+        </div>
+    </div>
+
+    <!-- JavaScript 互動功能 -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Copy LINE ID Function
+        function copyLineID() {
+            navigator.clipboard.writeText('@fqt8440v').then(() => {
+                alert('已成功複製艾薇娜官方 LINE ID: @fqt8440v');
+            });
+        }
+
+        // Lightbox Image Viewer
+        function openLightbox(imgSrc) {
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImage');
+            img.src = imgSrc;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
